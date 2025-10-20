@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thibaut Morgenstern – Portfolio</title>
+  <meta name="description" content="Portfolio von Thibaut Morgenstern – Schüler mit Interesse an Informatik, HTML, CSS und Python." />
+  <style>
+    :root{
+      --bg:#0f172a; /* slate-900 */
+      --card:#111827ee; /* gray-900 */
+      --text:#e5e7eb; /* gray-200 */
+      --muted:#94a3b8; /* slate-400 */
+      --accent:#22d3ee; /* cyan-400 */
+      --accent-2:#a78bfa; /* violet-400 */
+      --link:#38bdf8; /* sky-400 */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Inter,"Helvetica Neue",Arial,sans-serif;background:radial-gradient(1200px 800px at 110% -10%, #1f2937 0%, var(--bg) 60%);color:var(--text);line-height:1.6}
+    a{color:var(--link);text-decoration:none}
+    a:focus,button:focus,input:focus{outline:3px solid var(--accent);outline-offset:2px}
+    header{max-width:1000px;margin:0 auto;padding:2rem 1rem 0}
+    .hero{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center}
+    .hero h1{font-size:clamp(1.8rem, 3vw + 1rem, 3rem);margin:.2rem 0}
+    .hero p{color:var(--muted);margin:.3rem 0 1rem}
+    .tag{display:inline-block;padding:.25rem .6rem;border:1px solid #334155;border-radius:999px;margin:.15rem;color:#cbd5e1;font-size:.9rem}
+    .cta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001b1b;padding:.7rem 1rem;border:none;border-radius:.8rem;font-weight:700;cursor:pointer}
+    .btn.secondary{background:transparent;border:1px solid #334155;color:var(--text)}
+    main{max-width:1000px;margin:0 auto;padding:2rem 1rem 4rem}
+    section{margin-top:2.5rem}
+    h2{font-size:1.5rem;margin:0 0 1rem}
+    .grid{display:grid;gap:1rem}
+    @media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{background:linear-gradient(180deg,#0b1220ee,#0b1220cc 70%,#0b122088);border:1px solid #1f2937;border-radius:1rem;padding:1rem;box-shadow:0 10px 30px #0004}
+    .card h3{margin:.2rem 0 .3rem;font-size:1.1rem}
+    .badge{display:inline-block;margin:.2rem .3rem 0 0;padding:.2rem .5rem;border:1px solid #334155;border-radius:.6rem;font-size:.8rem;color:#cbd5e1}
+    .list-clean{list-style:none;padding:0;margin:0}
+    .list-clean li{margin:.3rem 0;color:#cbd5e1}
+    footer{max-width:1000px;margin:0 auto;padding:2rem 1rem;color:#94a3b8;border-top:1px solid #1f2937}
+    .muted{color:var(--muted)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    .two-col{display:grid;gap:1rem}
+    @media(min-width:900px){.two-col{grid-template-columns:1.2fr .8fr}}
+    .timeline{border-left:2px dashed #334155;padding-left:1rem}
+    .timeline .item{margin:0 0 1rem}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#0b1220;border:1px solid #334155;border-radius:.4rem;padding:.05rem .35rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <div>
+        <span class="tag" aria-hidden="true">Schüler · 2010</span>
+        <span class="tag" aria-hidden="true">Otto‑Rommel‑Realschule</span>
+        <h1>Thibaut Morgenstern</h1>
+        <p>Ich lerne <strong>HTML</strong>, <strong>CSS</strong> und <strong>Python</strong> und suche ein Schülerpraktikum, um echte Softwareentwicklung kennenzulernen.</p>
+        <div class="cta">
+          <a class="btn" href="#projekte">Meine Projekte</a>
+          <a class="btn secondary" href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="ueber">
+      <h2>Über mich</h2>
+      <div class="two-col">
+        <div class="card">
+          <p>Hallo! Ich bin Thibaut (15), neugierig, kreativ und mag es, Probleme am Computer zu lösen. Zurzeit lerne ich Web‑Entwicklung mit HTML/CSS und Grundlagen in Python (u. a. über <em>The Odin Project</em>).</p>
+          <p class="muted">Ziel: Einblick in den Alltag eines Fachinformatikers, Teamarbeit erleben und erste kleine Aufgaben selbstständig lösen.</p>
+          <div>
+            <span class="badge">Teamfähig</span>
+            <span class="badge">Analytisch</span>
+            <span class="badge">Lernbereit</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Kenntnisse</h3>
+          <ul class="list-clean">
+            <li>HTML &amp; CSS – Grundlayout, Farben, Listen, Bilder, Links</li>
+            <li>Python – Variablen, Eingaben, Bedingungen (<span class="kbd">if</span>), Schleifen</li>
+            <li>Tools – VS Code, Git (Basics), GitHub</li>
+          </ul>
+          <h3 style="margin-top:1rem">Ich lerne gerade</h3>
+          <ul class="list-clean">
+            <li>Responsives Design (Mobile‑First)</li>
+            <li>Saubere Code‑Struktur &amp; Kommentare</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projekte">
+      <h2>Projekte</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Über‑mich Webseite</h3>
+          <p>Eine einfache HTML/CSS‑Seite mit Überschrift, Bild, Liste und Link – zum Üben von Struktur und Stil.</p>
+          <ul class="list-clean">
+            <li><strong>Geübt:</strong> Grundgerüst (<span class="kbd">&lt;h1&gt;</span>, <span class="kbd">&lt;p&gt;</span>, <span class="kbd">&lt;img&gt;</span>)</li>
+            <li><strong>Code:</strong> <em>demnächst auf GitHub</em></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Python: Alters‑Rechner</h3>
+          <p>Kleines Terminalprogramm: fragt Namen und Alter, rechnet <em>Alter + 1</em> und gibt eine freundliche Nachricht aus.</p>
+          <ul class="list-clean">
+            <li><strong>Geübt:</strong> <span class="kbd">input()</span>, <span class="kbd">int()</span>, <span class="kbd">print()</span></li>
+            <li><strong>Code:</strong> <em>demnächst auf GitHub</em></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Mini‑Stilguide</h3>
+          <p>Eine kleine CSS‑Datei mit wiederverwendbaren Klassen (Buttons, Karten, Abstände), um Ordnung im Code zu halten.</p>
+          <ul class="list-clean">
+            <li><strong>Geübt:</strong> Klassen, Variablen, Lesbarkeit</li>
+            <li><strong>Link:</strong> <em>demnächst auf GitHub</em></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="lernen">
+      <h2>Lern‑Log</h2>
+      <div class="timeline">
+        <div class="item">
+          <strong>Woche 1:</strong> HTML Grundstruktur, Absätze &amp; Listen. <span class="muted">(30 Min/Tag)</span>
+        </div>
+        <div class="item">
+          <strong>Woche 2:</strong> CSS Farben, Schriftarten, Abstände.
+        </div>
+        <div class="item">
+          <strong>Woche 3:</strong> Python Eingaben &amp; Bedingungen, kleines Terminalprogramm.
+        </div>
+      </div>
+      <p class="muted">Tipp: Jede Woche 1–2 Sätze ergänzen. So sieht man Fortschritt.</p>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <div class="card">
+        <p><strong>E‑Mail:</strong> <a href="mailto:verheye.thibaut44@gmail.com">verheye.thibaut44@gmail.com</a></p>
+        <p><strong>GitHub:</strong> <a href="#" aria-label="GitHub Profil (bald)">bald verfügbar</a></p>
+        <p><strong>Standort:</strong> Hildrizhausen, Deutschland</p>
+        <p class="muted">Optional: Link zum Lebenslauf (PDF) oder Schulbescheinigung.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Thibaut Morgenstern. Erstellt als Lernprojekt. Barrierearm, mobil‑freundlich, ohne Tracker.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
